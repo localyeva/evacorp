@@ -1,0 +1,40 @@
+svn : evacorp
+link : http://118.69.127.91/repos/evacorp/
+user: evacorp 
+pass : P@sseva
+
+--------------------------------------------------------------------------------
+
+Production FTP:
+host : wx10.wadax.ne.jp
+user : evolable-asia
+pass: P@ssw0rd!@#
+
+--------------------------------------------------------------------------------
+
+Test server: 10.10.91.52
+http://10.10.91.52:8110/ => phpmyadmin
+
+--------------------------------------------------------------------------------
+
+http://10.10.91.52:1111/ => Do mot nguoi khac lam....va chua hoan thien
+account phpmyadmin: khangdl / khangdl2015
+
+--------------------------------------------------------------------------------
+
+ssh acc:
+khangdl / khangdl@2015
+
+day la web ben ngoai evolable.asia => http://10.10.91.52:8160/
+
+--------------------------------------------------------------------------------
+
+db root acc: root / 12345678
+
+================================================================================
+REAL
+
+https://wx10.wadax.ne.jp/phpmyadmin/
+db name evolable-asia01
+db user evolable-asia01
+db P@ssw0rddb#@!

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* 
+    Created on : Jul 22, 2015, 10:06:31 AM
+    Author     : khangld
+    Description: style
+*/
+
+@color-primary: #333;
+@color-asterisk: #e74c3c;
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+ol, ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------------------------------------------- Contact page */
+.contact{
+    .banner{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    h2{
+        &.title{
+            color: @color-primary;
+            font-size: 2.1rem;
+            font-weight: normal;
+            margin: 40px 0 20px;
+            text-shadow: 1px 1px 0 #fff;
+        }
+    }
+    span{
+        &.red{
+            color: @color-asterisk;
+        }
+    }
+    /*    input[type="text"] {
+            border: 2px solid #ccc;
+            height: 30px;
+            width: 480px;
+        }*/
+
+    form{
+        label{
+            font-weight: normal;
+        }
+        .send{
+            clear: both;
+            padding-top: 40px;
+            button{
+                text-align: center;
+                width: 250px;
+            }
+        }
+    }
+    .privacy{
+        h3 {
+            font-size: 1.17em;
+            margin: 1em 0;
+        }
+        ul{
+            list-style: outside;
+            padding-left: 20px;
+            li{
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+/*============================================================================*/
+@import 'style-xs.less';
+@import 'style-sm.less';
+@import 'style-md.less';
+@import 'style-lg.less';
+@import 'style-xs-max.less';

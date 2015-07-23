@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* CSS Document */
+#index{
+	background: url(../../../img/top/bg_t01.jpg) no-repeat scroll center top #f8f8f8;
+}
+
+.ul_top01{
+	margin: 0 auto;
+    padding-top: 160px;
+    width: 960px;
+}
+
+.ul_top01 li{
+	float: left;
+    margin-bottom: 95px;
+    margin-right: 48px;
+    text-align: center;
+}
+
+.ul_top01 li p{ 
+padding-top: 10px;
+}
+
+.last{
+	margin-right: 0 !important;
+}
+
+.face{
+	 background: none repeat scroll 0 0 #ffffff;
+    float: right;
+    height: 157px;
+}
+
+.p_top01 img{
+	display: block;
+	padding-bottom: 10px;
+}
+
+.ul_menu{
+	 background: url("../../../img/top/bg_t03.png") no-repeat scroll right 0 rgba(0, 0, 0, 0);
+    padding-right: 35px;
+}
+
+
+.ul_menu2{
+	  background: url("../../../img/top/bg_t03.png") no-repeat scroll right 0 rgba(0, 0, 0, 0);
+    height: 155px;
+    margin-right: 50px;
+    padding-left: 35px;
+    padding-right: 38px;
+}
+
+
+#footerInner li a{
+	font-size: 12px;
+font-weight: bold;
+color: #ffffff;
+}
+#footerInner li{
+	 line-height: 30px;
+}
+
+#footerInner li span{
+	color: #FAEE00;
+	font-size: 10px;
+	font-weight: normal;
+	padding-right: 5px;
+}
+
+#footerInner li .child li a{
+	font-size: 10px;
+}

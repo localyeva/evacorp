@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+/*-----------------------------------------------------------
+Body
+-------------------------------------------------------------*/
+body {
+  width: 100%;
+  margin:0;
+  padding:0;
+  text-align:center;
+  line-height: 1.5;
+  letter-spacing:0.05em;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro","メイリオ", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 12px;
+  height:100%;
+  color: #3e3a39;
+  min-width: 1100px;
+  }
+html {
+	-webkit-text-size-adjust: none;
+}
+/*-----------------------------------------------------------
+Header
+-------------------------------------------------------------*/
+#headerWrap{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+  }
+  .headerL {
+	  float: left;
+	  width: 510px;
+  }
+  #index .headerL {
+	  float: left;
+	  width: 600px;
+  }
+  #logo {
+	  float: left;
+  }
+ #headerWrap h1 {
+	  float: right;
+	  width: 320px;
+	  padding-top: 12px;
+  }
+  #index #headerWrap h1 {
+	  float: right;
+	  width: 420px;
+	  padding-top: 12px;
+  }
+  .btnContact {
+	  float: right;
+	  padding-top: 10px;
+  }
+/*-----------------------------------------------------------
+global Navi
+-------------------------------------------------------------*/
+#gNaviWrap{
+  width: 100%;
+  background: url(../img/gnavi/bg_gNavi01.png) repeat-x 0 0;
+  height: 59px;
+  }
+#gNavi{
+  width: 1000px;
+  margin: 0 auto;
+  }
+#gNavi li{
+	float: left;
+  }
+#gNavi li a{
+	background: url(../img/gnavi/bg_gNavi1.png) no-repeat 0 0;
+	display: block;
+	height: 52px;
+	text-indent: -9999em;
+  }
+
+#gNavi li a:hover {
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -webkit-transition: none !important;
+  -ms-transition: none !important;
+}
+  #gNavi01 a {background-position: 0 0; width: 49px;}
+  #gNavi02 a {background-position: -49px 0 !important; width: 119px;}
+  #news #gNavi02 a, #gNavi02 a:hover {background-position: -49px -52px !important; width: 119px;}
+  #gNavi03 a {background-position: -168px 0 !important; width: 119px;}
+  #company #gNavi03 a, #gNavi03 a:hover {background-position: -168px -52px !important; width: 119px;}
+  #gNavi04 a {background-position: -287px 0 !important; width: 119px;}
+  #service #gNavi04 a, #gNavi04 a:hover {background-position: -287px -52px !important; width: 119px;}
+  #gNavi05 a {background-position: -406px 0 !important; width: 119px;}
+  #recommend #gNavi05 a, #gNavi05 a:hover {background-position: -406px -52px !important; width: 119px;}
+  #gNavi06 a {background-position: -525px 0 !important; width: 118px;}
+  #about_vietnam #gNavi06 a, #gNavi06 a:hover {background-position: -525px -52px !important; width: 118px;}
+  #gNavi07 a {background-position: -643px 0 !important; width: 119px;}
+  #faq #gNavi07 a, #gNavi07 a:hover {background-position: -643px -52px !important; width: 119px;}
+  #gNavi08 a {background-position: -762px 0 !important; width: 119px;}
+  #recruit #gNavi08 a, #gNavi08 a:hover {background-position: -762px -52px !important; width: 119px;}
+  #gNavi09 a {background-position: -881px 0 !important; width: 119px;}
+  #contact #gNavi09 a, #gNavi09 a:hover {background-position: -881px -52px !important; width: 119px;}
+/*-----------------------------------------------------------
+ Container/Maincontent
+------------------------------------------------------------*/
+div#container{
+  width: 1000px;
+  height: auto;
+  text-align: center;
+  margin: 20px auto 60px auto;
+  }
+div#mainContent{
+  width: 770px;
+  height: auto;
+  margin: 0;
+  float: right;
+  }
+/*-----------------------------------------------------------
+SubNavi
+------------------------------------------------------------*/
+#subNavi{
+  width: 200px;
+  float: left;
+}
+/*-----------------------------------------------------------
+Footer
+------------------------------------------------------------*/
+#footerWrap{
+  width: 100%;
+  background: url(../img/footer/bg_dotted.png) repeat 0 0;
+  }
+#footerInner{
+	background: #34302f url(../img/footer/bg_shadow01.png) repeat-x 0 0;
+	padding-top: 6px;
+  }
+	#footerInner .outer {
+		background: url(../img/footer/bg_shadow02.png) repeat-x 0 bottom;
+		padding-bottom: 8px;
+	  }
+	#footerInner .inner {
+		margin: 0 auto;
+		width: 1000px;
+		padding: 25px 0;
+	  }
+	  .address {
+		  color: #fff;
+		  float: left;
+		  width: 170px;
+		  font-size: 10px;
+	  }
+
+	  .fContact {
+		  color: #c9caca;
+		  float: right;
+		  width: 205px;
+	  }
+	  .fLink {
+		  float: left;
+		  width: 620px;
+	  }
+	  	.fLink > li {
+			float: left;
+			background: url(../img/footer/bg_line.png) repeat-y 0 0;
+			padding-left: 40px;
+			margin-left: 35px;
+		}
+		.fLink a:hover{
+		  color: #fff;
+		  text-decoration: underline;
+	  	}
+
+		.ul_fLink > li > a {
+			background: url(../img/ico/bg_icon.png) no-repeat 0 -237px;
+			padding-left: 12px;
+			color: #efefef;
+			display: block;
+			padding-bottom: 10px;
+		}
+		.ul_fLink ul li > a {
+			display: block;
+			padding-bottom: 5px;
+			color: #b5b5b6;
+			font-size: 10px;
+		}
+		.ul_fLink ul ul li > a {
+			background: url(../img/ico/bg_icon.png) no-repeat 0 -838px;
+			padding-left: 10px;
+			margin-left: 15px;
+		}
+		.ul_fLink03 > li a {
+			padding-bottom: 13px;
+		}
+
+  .fContent {
+	  margin: 0 auto;
+	  width: 1000px;
+	  padding: 15px 0;
+	  font-size: 10px;
+  }
+.fNavi {
+	float: left;
+	width: 450px;
+}
+.fNavi li {
+	float: left;
+	background: url(../img/ico/bg_icon.png) no-repeat 0 -1017px;
+	padding-left: 10px;
+	margin-right: 10px;
+}
+.footerRecuit01{
+	margin: -7px 0 5px 13px;
+}
+
+.copyright {
+	float: right;
+	width: 530px;
+}
+/*-----------------------------------------------------------
+Bread
+------------------------------------------------------------*/
+#bread{
+  margin: 0 0 15px;
+  }
+#bread li{
+  float: left;
+  color: #9fa0a0;
+  }
+#bread a {
+  margin: 0 5px 0 0;
+  background: url(../img/ico/bg_icon.png) no-repeat right -957px;
+  padding: 0 10px 0 0;
+  color: #9fa0a0;
+  }
+
+/* common */
+
+
+.contactBox{
+	background: url(../img/btn/bg_contact01.jpg) no-repeat 0 0;
+	width: 742px;
+	height: 209px;
+	margin: 80px auto 40px auto;
+	position: relative;
+}
+	.contactBox img{
+	position: absolute;
+	top: -68px;
+	left: 265px;
+	}
+
+.wi_icon {
+	background: url(../img/ico/bg_icon.png) no-repeat 0 0;
+	display: inline-block;
+}
+.wi_icon:hover {opacity: 0.6; filter: alpha(opacity=60);}
+	.wi_icon01 {width: 56px;height: 18px;background-position: 0 0 !important;}
+	.wi_icon02 {width: 66px;height: 13px;background-position: 0 -30px !important;}
+	.wi_icon03 {width: 42px;height: 13px;background-position: 0 -60px !important;}
+	.wi_icon04 {width: 67px;height: 13px;background-position: 0 -90px !important;}
+	.wi_icon05 {width: 58px;height: 25px;background-position: -60px -420px !important;}
+	.wi_icon06 {width: 40px;height: 7px;background-position: 0px -420px !important;}
+	.wi_icon07 {width: 41px;height: 7px;background-position: -120px -420px !important;}
+	.wi_icon08 {width: 37px;height: 34px;background-position: -120px -480px !important;}
+	.wi_icon09 {width: 37px;height: 34px;background-position: -180px -480px !important;}
+	.wi_icon10 {width: 37px;height: 34px;background-position: -240px -480px !important;}
