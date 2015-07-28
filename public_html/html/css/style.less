@@ -8,6 +8,7 @@
 
 @color-primary: #333;
 @color-asterisk: #e74c3c;
+@color-error: #e74c3c;
 
 h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
@@ -31,9 +32,34 @@ ol, ul {
     padding: 0;
 }
 
+.inline-block{
+    display: inline-block;
+}
+
+.center{
+    text-align: center;
+}
+
+.table-borderless{
+    tbody{
+        tr{
+            th{
+                border: none;
+            }
+        }
+    }
+    tbody{
+        tr{
+            td{
+                border: none;
+            }
+        }
+    }
+}
 /*-------------------------------------------------------------- Contact page */
 .contact{
     .banner{
+        max-width: 100%;
         margin-top: 20px;
         margin-bottom: 20px;
     }
@@ -83,6 +109,26 @@ ol, ul {
             }
         }
     }
+    label{
+        &.error{
+            color: @color-error;
+        }
+    }
+    input{
+        &.error{
+            color: @color-error;
+            border: 1px solid @color-error;
+        }
+    }
+    button{
+        &.btn-confirm{
+            width: 150px;
+        }
+    }
+}
+.eva-info{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*============================================================================*/

@@ -87,9 +87,21 @@
     <!-- /footer end -->
 </div>
 
-
+<!-- Google Code for Document request Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 963607952;
+var google_conversion_language = "en";
+var google_conversion_format = "2";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "suZCCNiTmwoQkPu9ywM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
 <?php wp_footer(); ?> 
 </body>
 </html>

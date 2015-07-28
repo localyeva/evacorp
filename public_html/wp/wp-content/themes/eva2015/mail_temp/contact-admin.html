@@ -1,0 +1,27 @@
+登録日時：{{ entry_time }}
+ホスト名：{{ entry_host }}
+ブラウザ：{{ entry_ua }}
+
+ホームページからお問い合わせがありました。
+
+■会社名：　{{ company }}
+{% if division != '' %}
+
+■部署名：　{{ division }}
+
+{% endif %}
+■お名前：　{{ name }}
+
+■メールアドレス：　{{ email }}
+
+■電話番号：　{{ tel }}
+
+■どこでエボラブルアジアを知りましたか?：　
+{% for item in inq_all %}
+　　　●{{ item }}
+{% endfor %}
+
+■お問い合わせ項目：　{{ itemSelect }}
+
+■お問い合わせ内容：
+{{ content }}

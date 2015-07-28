@@ -21,7 +21,21 @@
         <?php wp_head(); ?> 
     </head>
     <body>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-47878088-1']);
+            _gaq.push(['_trackPageview']);
 
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        
         <div class="clearfix" id="headerWrap">
             <!-- /header start -->
             <div class="headerL clearfix">
@@ -31,17 +45,17 @@
             <p class="btnContact"><img width="137" height="39" alt="ベトナムでのラボ型開発やBPOのご相談はコチラ" src="<?php echo get_template_directory_uri() ?>/img/header/txt_bpo.png"><a href="<?php bloginfo('url') ?>/contact"><img width="175" height="39" class="opa" alt="お問合わせ/ご相談" src="<?php echo get_template_directory_uri() ?>/img/header/btn_bpo.png" style="opacity: 1;"></a></p>
             <!-- /header end -->
         </div>
-        
+
         <div id="gNaviWrap"> 
             <!-- /globalNavi start -->
             <ul class="clearfix" id="gNavi">
                 <li id="gNavi01"><a href="<?php echo bloginfo('url') ?>">HOME</a></li>
                 <li id="gNavi02"><a href="<?php echo bloginfo('url') ?>/news">ニュース</a></li>
                 <li id="gNavi03"><a href="<?php echo bloginfo('url') ?>/company">企業情報</a></li>
-                <li id="gNavi04"><a href="<?php echo bloginfo('url') ?>service">サービス</a></li>
-                <li id="gNavi05"><a href="<?php echo bloginfo('url') ?>recommend">参加企業の声</a></li>
-                <li id="gNavi06"><a href="<?php echo bloginfo('url') ?>vietnam">ベトナムの魅力</a></li>
-                <li id="gNavi07"><a href="<?php echo bloginfo('url') ?>faq">FAQ</a></li>
+                <li id="gNavi04"><a href="<?php echo bloginfo('url') ?>/service">サービス</a></li>
+                <li id="gNavi05"><a href="<?php echo bloginfo('url') ?>/recommend">参加企業の声</a></li>
+                <li id="gNavi06"><a href="<?php echo bloginfo('url') ?>/vietnam">ベトナムの魅力</a></li>
+                <li id="gNavi07"><a href="<?php echo bloginfo('url') ?>/faq">FAQ</a></li>
                 <li id="gNavi08"><a href="<?php echo bloginfo('url') ?>/recruit">求人情報</a></li>
                 <li id="gNavi09"><a href="<?php echo bloginfo('url') ?>/contact">お問い合わせ</a></li>
             </ul>

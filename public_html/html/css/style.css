@@ -29,6 +29,18 @@ ul {
   margin: 0;
   padding: 0;
 }
+.inline-block {
+  display: inline-block;
+}
+.center {
+  text-align: center;
+}
+.table-borderless tbody tr th {
+  border: none;
+}
+.table-borderless tbody tr td {
+  border: none;
+}
 /*-------------------------------------------------------------- Contact page */
 .contact {
   /*    input[type="text"] {
@@ -38,6 +50,7 @@ ul {
         }*/
 }
 .contact .banner {
+  max-width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -72,6 +85,20 @@ ul {
 }
 .contact .privacy ul li {
   font-size: 12px;
+}
+.contact label.error {
+  color: #e74c3c;
+}
+.contact input.error {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+.contact button.btn-confirm {
+  width: 150px;
+}
+.eva-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 /*============================================================================*/
 /* 
@@ -566,6 +593,33 @@ ul {
     width: 37px;
   }
   /*---------------------------------------------------------- Contact page */
+  .keyvisual-contact {
+    margin-bottom: 40px;
+    position: relative;
+    max-width: 100%;
+    min-height: 416px;
+    background: url('../img/keyvisual_contact_pc.jpg') no-repeat scroll center center / auto 100%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    overflow: hidden;
+  }
+  .keyvisual-contact .text {
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+  }
+  .keyvisual-contact .text p.lead {
+    text-align: center;
+    margin: 10px auto;
+  }
+  .keyvisual-contact .text p.lead.main {
+    font-size: 40px;
+    margin: 20 auto;
+  }
   .contact form {
     margin: 0 auto;
     max-width: 830px;

@@ -23,3 +23,5 @@ function generate_css() {
 }
 
 add_action('wp_head', 'generate_css');
+
+?>
