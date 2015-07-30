@@ -49,3 +49,46 @@ http://framgia.com/jp/contact.html
         })
     })
 }(jQuery);
+
+
+
+
+
+
+
+
+
+<?php
+                $args = array('hide_empty=0');
+                $terms = get_terms('faqcat', $args);
+                $loop_cat_str = '';
+                foreach($terms as $term):
+                    $loop_cat_str .= '<li id="faqCat01">';
+                    $loop_cat_str .= '<h3><span>' . $term->name . '</span></h3>';
+                    $loop_cat_str .= '<ul class="ul_faq03">';
+                    
+                    $args = array(
+                        'post_type' => 'faq',
+                        'posts_per_page' => '-1',
+                        'order' => 'DESC',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'faqcat',
+                                'field' => $term->slug,
+                                'terms' => array($term->term_id)
+                            )
+                        )
+                    );
+                    $loop = new WP_Query($args);
+                    
+                    while ($loop->have_posts()): $loop->the_post();
+                        $loop_cat_str .= '<li id="faq' . get_the_ID() . '">';
+                        $loop_cat_str .= '<h4 id="' . get_the_ID() . '">' . get_the_title() . '</h4>';  // get_field('question')
+                        $loop_cat_str .= get_the_content(); // get_field('answer')
+                        $loop_cat_str .= '</li>';
+                    endwhile;
+                    
+                endforeach;
+            ?>
+            
+            <?php echo $loop_cat_str ?>

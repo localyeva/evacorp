@@ -1,7 +1,7 @@
 <?php
 /*
  * Author: KhangLe
- * Template Name: contact-confirm
+ * Template Name: Contact-Confirm
  * 
  */
 

@@ -1,7 +1,7 @@
 <?php
 /*
  * Author: KhangLe
- * Template Name: contact-thankyou
+ * Template Name: Contact-Thankyou
  * 
  */
 

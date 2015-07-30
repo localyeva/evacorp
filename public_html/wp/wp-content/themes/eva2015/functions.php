@@ -8,6 +8,7 @@
 
 include_once (dirname(__FILE__) . '/MyFunctions.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize.php');
+include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
 
 
 @ini_set('upload_max_size', '64M');
@@ -123,7 +124,7 @@ function todo_restrict_manage_posts() {
                 'taxonomy' => $tax_slug,
                 'name' => $tax_obj->name,
                 'orderby' => 'term_order',
-                'selected' => $_GET[$tax_obj->query_var],
+                'selected' => @$_GET[$tax_obj->query_var],
                 'hierarchical' => $tax_obj->hierarchical,
                 'show_count' => false,
                 'hide_empty' => true
@@ -184,65 +185,6 @@ function my_custom_news() {
         'has_archive' => true
     );
     register_post_type('news', $args);
-}
-
-// Custom post FAQ
-add_action('init', 'my_custom_faq');
-
-function my_custom_faq() {
-    $labels = array(
-        'name' => _x('FAQ', 'post type general name'),
-        'singular_name' => _x('FAQ', 'post type singular name'),
-        'add_new' => _x('FAQを追加', 'faq'),
-        'add_new_item' => __('FAQを書く'),
-        'edit_item' => __('FAQ記事を編集'),
-        'new_item' => __('新しいFAQ記事'),
-        'view_item' => __('FAQ記事を見る'),
-        'search_items' => __('FAQ記事を探す'),
-        'not_found' => __('FAQ記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱にFAQの記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 6,
-        'supports' => array('title', 'editor'),
-        'has_archive' => true
-    );
-    register_post_type('faq', $args);
-}
-
-// Faq category
-add_action('init', 'create_faq_taxonomy', '0');
-
-function create_faq_taxonomy() {
-    $taxonomylabels = array(
-        'name' => _x('faqcat', 'post type general name'),
-        'singular_name' => _x('faqcat', 'post type singular name'),
-        'search_items' => __('faqcat'),
-        'all_items' => __('faqcat'),
-        'parent_item' => __('Parent faqcat'),
-        'parent_item_colon' => __('Parent faqcat:'),
-        'edit_item' => __('faqcat記事を編集'),
-        'add_new_item' => __('カテゴリを追加する'),
-        'menu_name' => __('カテゴリー'),
-    );
-    $args = array(
-        'labels' => $taxonomylabels,
-        'hierarchical' => true,
-        'has_archive' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'faqcat')
-    );
-    register_taxonomy('faqcat', 'faq', $args);
 }
 
 // Custom post Recommend

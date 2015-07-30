@@ -8,13 +8,51 @@
 
 @media (max-width: @screen-xs) {
     /*---------------------------------------------------------- Contact page */
-    form{
-        label{
-            font-weight: normal;
-        }
-        .send{
-            .hold-btn-send{
+    .keyvisual-contact{
+        margin-bottom: 0px;
+        position: relative;
+        max-width: 100%;
+        min-height: 90px;
+        background: url('../img/keyvisual_contact_pc.jpg') no-repeat scroll center center / auto 100%;
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        background-size: 100% auto;
+        overflow: hidden;
+        .text{
+            color: #fff;
+            left: 0;
+            position: absolute;
+            top: 30%;
+            width: 100%;
+            p.lead{
                 text-align: center;
+                margin: 10px auto;
+                &.main{
+                    font-size: 20px;
+                    margin: -10px auto;
+                }
+            }
+        }
+    }
+    .contact{
+        .eva-info{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        h2{
+            &.title{
+                margin: 20px 0;
+            }
+        }
+        form{
+            label{
+                font-weight: normal;
+            }
+            .send{
+                .hold-btn-send{
+                    text-align: center;
+                }
             }
         }
     }

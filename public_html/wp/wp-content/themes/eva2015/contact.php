@@ -1,7 +1,7 @@
 <?php
 /*
  * Author: KhangLe
- * Template Name: contact
+ * Template Name: Contact
  * 
  */
 get_header();
@@ -46,10 +46,10 @@ if (is_array($reg_inq)) {
     <div class="keyvisual-contact">
         <div class="text">
             <p class="lead main">
-                新しい文化を創る
+                <?php echo get_contact_text_1() ?>
             </p>
             <p class="lead">
-                xxx xxxx xxx
+                <?php echo get_contact_text_2() ?>
             </p>
         </div>
     </div>
@@ -145,7 +145,7 @@ if (is_array($reg_inq)) {
                 <label for="contact-item" class="col-sm-3 control-label">お問い合わせ項目<span class="red">※</span></label>
                 <div class="col-sm-9">
                     <?php
-                    echo mwp_dropdownList($arr_itemSelect, array('id' => 'contact-item', 'name' => 'itemSelect', 'class' => 'form-control'), $reg_itemSelect);
+                    echo mwp_dropdownList($arr_itemSelect, array('id' => 'contact-item', 'name' => 'itemSelect', 'class' => 'form-control'), $reg_itemSelect, false, array(0));
                     ?>
                 </div>
             </div>

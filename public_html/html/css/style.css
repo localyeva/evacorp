@@ -96,9 +96,55 @@ ul {
 .contact button.btn-confirm {
   width: 150px;
 }
-.eva-info {
-  margin-top: 20px;
-  margin-bottom: 20px;
+/*------------------------------------------------------------------------ FAQ*/
+.faq .ul_faq01 li {
+  width: 373px;
+}
+.faq .ul_faq01 li p {
+  background: rgba(0, 0, 0, 0) url("../img/ico/bg_icon.png") no-repeat scroll 0 -1134px;
+  margin: 5px 6px 0;
+  padding: 0 0 0 8px;
+}
+.faq .ul_faq01 li p:first-child {
+  background: rgba(0, 0, 0, 0) url("../img/ico/bg_icon.png") no-repeat scroll 5px -1250px;
+  border-bottom: 1px solid #9d72b5;
+  border-top: 1px solid #9d72b5;
+  font-weight: bold;
+  margin: 0 0 10px;
+  padding: 5px 0 5px 12px;
+}
+.faq .ul_faq01 li p:first-child a {
+  color: #9d72b5;
+}
+.faq .ul_faq02 li:first-child {
+  margin-top: 0;
+}
+.faq .ul_faq02 > li {
+  margin-top: 60px;
+}
+.faq .ul_faq02 > li h3 {
+  background: rgba(0, 0, 0, 0) url("../img/faq/bg_repeat.png") repeat-x scroll center bottom;
+}
+.faq .ul_faq02 > li h3 span {
+  background: rgba(0, 0, 0, 0) url("../img/ico/bg_icon.png") no-repeat scroll 5px -1483px;
+  border-top: 2px solid #9d72b5;
+  color: #9d72b5;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0 10px 45px;
+}
+.faq .ul_faq03 li {
+  padding-bottom: 20px;
+}
+.faq .ul_faq03 li h4 {
+  background: rgba(0, 0, 0, 0) url("../img/ico/bg_icon.png") no-repeat scroll 5px -1360px;
+  border-bottom: 1px dotted #888;
+  border-top: 2px solid #9d72b5;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 13px;
+  padding: 22px 0 19px 28px;
 }
 /*============================================================================*/
 /* 
@@ -108,10 +154,44 @@ ul {
 */
 @media (max-width: 480px) {
   /*---------------------------------------------------------- Contact page */
-  form label {
+  .keyvisual-contact {
+    margin-bottom: 0px;
+    position: relative;
+    max-width: 100%;
+    min-height: 90px;
+    background: url('../img/keyvisual_contact_pc.jpg') no-repeat scroll center center / auto 100%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    overflow: hidden;
+  }
+  .keyvisual-contact .text {
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+  }
+  .keyvisual-contact .text p.lead {
+    text-align: center;
+    margin: 10px auto;
+  }
+  .keyvisual-contact .text p.lead.main {
+    font-size: 20px;
+    margin: -10px auto;
+  }
+  .contact .eva-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .contact h2.title {
+    margin: 20px 0;
+  }
+  .contact form label {
     font-weight: normal;
   }
-  form .send .hold-btn-send {
+  .contact form .send .hold-btn-send {
     text-align: center;
   }
 }
@@ -120,6 +200,36 @@ ul {
     Author     : khangld
     Description: @screen-sm
 */
+@media (min-width: 768px) {
+  /*---------------------------------------------------------- Contact page */
+  .keyvisual-contact {
+    margin-bottom: 0px;
+    position: relative;
+    max-width: 100%;
+    min-height: 270px;
+    background: url('../img/keyvisual_contact_pc.jpg') no-repeat scroll center center / auto 100%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    overflow: hidden;
+  }
+  .keyvisual-contact .text {
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+  }
+  .keyvisual-contact .text p.lead {
+    text-align: center;
+    margin: 10px auto;
+  }
+  .keyvisual-contact .text p.lead.main {
+    font-size: 40px;
+    margin: 10px auto;
+  }
+}
 /* 
     Created on : Jul 22, 2015, 9:50:29 AM
     Author     : khangld
@@ -269,6 +379,34 @@ ul {
   #subNavi {
     float: left;
     width: 200px;
+  }
+  /*---------------------------------------------------------- Contact page */
+  .keyvisual-contact {
+    margin-bottom: 0px;
+    position: relative;
+    max-width: 100%;
+    min-height: 270px;
+    background: url('../img/keyvisual_contact_pc.jpg') no-repeat scroll center center / auto 100%;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    overflow: hidden;
+  }
+  .keyvisual-contact .text {
+    color: #fff;
+    left: 0;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+  }
+  .keyvisual-contact .text p.lead {
+    text-align: center;
+    margin: 10px auto;
+  }
+  .keyvisual-contact .text p.lead.main {
+    font-size: 40px;
+    margin: 10px auto;
   }
 }
 /* 
@@ -620,6 +758,10 @@ ul {
     font-size: 40px;
     margin: 20 auto;
   }
+  .contact .eva-info {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   .contact form {
     margin: 0 auto;
     max-width: 830px;
@@ -640,3 +782,6 @@ ul {
     Author     : khangld
     Description: (@screen-sm-min - 1)
 */
+@media (min-width: 767px) {
+  /*---------------------------------------------------------- Contact page */
+}
