@@ -3231,7 +3231,7 @@ function rel_canonical() {
 	if ( $page = get_query_var('cpage') )
 		$link = get_comments_pagenum_link( $page );
 
-//	echo "<link rel='canonical' href='$link' />\n";
+	echo "<link rel='canonical' href='$link' />\n";
 }
 
 /**
@@ -3318,7 +3318,7 @@ function wp_shortlink_wp_head() {
 	if ( empty( $shortlink ) )
 		return;
 
-//	echo "<link rel='shortlink' href='" . esc_url( $shortlink ) . "' />\n";
+	echo "<link rel='shortlink' href='" . esc_url( $shortlink ) . "' />\n";
 }
 
 /**
