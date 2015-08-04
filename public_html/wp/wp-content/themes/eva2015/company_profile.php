@@ -15,7 +15,7 @@ get_header();
             <?php
             $wp_query = new WP_Query();
             $param = array(
-                'post_type' => 'company_profile',
+                'post_type' => 'company-profile',
                 'order' => 'DESC',
                 'post_status' => 'publish',
                 'posts_per_page' => '1',

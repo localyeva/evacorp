@@ -102,6 +102,7 @@ var google_remarketing_only = false;
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.colorbox.js"></script>
 <?php wp_footer(); ?> 
 </body>
 </html>

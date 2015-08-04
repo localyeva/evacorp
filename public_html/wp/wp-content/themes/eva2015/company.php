@@ -23,7 +23,7 @@ get_header();
         <div class="row">
             <?php
             $args = array(
-                'post_type' => 'company',
+                'post_type' => 'company-general',
                 'posts_per_page' => '-1',
                 'order' => 'DESC'
             );
@@ -32,13 +32,13 @@ get_header();
             while ($loop->have_posts()): $loop->the_post();
                 ?>
                 <div class="col-md-6 col-xs-12 inline-block">
-                    <a href="<?php the_field('link') ?>">
+                    <a href="<?php echo bloginfo('url') . '/' . get_field('link') ?>">
                         <div class="col-md-3">
-                            <img class="img-responsive" width="150" src="<?php echo the_field('image') ?>"/>
+                            <img class="img-responsive" width="150" src="<?php the_field('image') ?>"/>
                         </div>
                         <div class="col-md-9">
-                            <h2><?php echo the_title() ?></h2>
-                            <p><?php echo the_field('description') ?></p>
+                            <h2><?php the_title() ?></h2>
+                            <p><?php the_field('description') ?></p>
                         </div>
                     </a>
                 </div>

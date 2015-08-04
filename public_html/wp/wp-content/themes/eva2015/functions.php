@@ -10,7 +10,6 @@ include_once (dirname(__FILE__) . '/MyFunctions.php');
 include_once (dirname(__FILE__) . '/MyTheme_Customize.php');
 include_once(dirname(__FILE__) . '/cpt_acf_definitions.php');
 
-
 @ini_set('upload_max_size', '64M');
 @ini_set('post_max_size', '64M');
 @ini_set('max_execution_time', '300');
@@ -46,16 +45,69 @@ add_image_size('staff02', 124, 124, true);
 add_image_size('staff03', 224, 328, true);
 add_image_size('staff04', 101, 101, true);
 
-/* ---------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+if (defined('WP_DEBUG') && WP_DEBUG) {
+    $error_setting = ini_get('display_errors');
+    if ('0' == $error_setting)
+        ini_set('display_errors', '1');
+}
 
 function scripts() {
     if (is_page('contact')) {
         wp_enqueue_script('js-validate', get_template_directory_uri() . '/js/jquery.validate.min.js', array(), '1.14.0', TRUE);
         wp_enqueue_script('js-contact', get_template_directory_uri() . '/js/contact.js', array('js-validate'), '1', TRUE);
     }
+    //
+    
+    var_dump(get_query_var('pagename'));
 }
 
 add_action('wp_print_scripts', 'scripts');
+
+/**
+ * Filters wp_title to print a neat <title> tag based on what is being viewed.
+ *
+ * @param string $title Default title text for current view.
+ * @param string $sep Optional separator.
+ * @return string The filtered title.
+ */
+function theme_name_wp_title($title, $sep) {
+    if (is_feed()) {
+        return $title;
+    }
+
+    global $page, $paged;
+
+    // Add the blog name
+    $title .= get_bloginfo('name', 'display');
+
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo('description', 'display');
+
+    if ($site_description && ( is_home() || is_front_page() )) {
+
+        if (is_page('index')) {
+            echo 1111111111;
+        }
+        $title .= " $sep $site_description";
+    }
+
+    // Add a page number if necessary:
+    if (( $paged >= 2 || $page >= 2 ) && !is_404()) {
+        $title .= " $sep " . sprintf(__('Page %s', '_s'), max($paged, $page));
+    }
+
+    return $title;
+}
+
+add_filter('wp_title', 'theme_name_wp_title', 10, 2);
+
+
+
+
+
+
 
 //function myStartSession() {
 //    if (!session_id()) {
@@ -220,6 +272,7 @@ function my_custom_recommend() {
     register_post_type('recommend', $args);
 }
 
+/*
 // Custom post Company/Staff
 add_action('init', 'my_custom_staff');
 
@@ -278,6 +331,7 @@ function create_staff_taxonomy() {
     );
     register_taxonomy('staffcat', 'staff', $args);
 }
+*/
 
 // Custom post Company/Gallery
 add_action('init', 'my_custom_gallery');
@@ -543,6 +597,7 @@ function my_custom_recruit() {
 }
 
 // Custom post company/company_profile
+/*
 add_action('init', 'my_custom_company_profile');
 
 function my_custom_company_profile() {
@@ -574,6 +629,7 @@ function my_custom_company_profile() {
     );
     register_post_type('company_profile', $args);
 }
+*/
 
 add_action('init', 'my_custom_requirements');
 

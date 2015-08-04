@@ -13,6 +13,13 @@ function theme_customize_register($wp_customize) {
         'title' => __('CONTACT'),
         'priority' => 20,
     ));
+    
+    /* GREETING */
+    $wp_customize->add_section('greeting', array(
+        'title' => __('GREETING'),
+        'priority' => 21,
+    ));
+    
 
     /* ADD SETTING & CONTROL */
     /* CONTACT */
@@ -50,6 +57,19 @@ function theme_customize_register($wp_customize) {
         'settings' => 'contact_top_pc_bg',
         'priority' => 1,
     )));
+    
+    /* GREETING */
+    $wp_customize->add_setting('greeting_image', array(
+        'default' => ''
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'greeting_image_c', array(
+        'label' => __('Greeting Image'),
+        'section' => 'greeting',
+        'settings' => 'greeting_image',
+        'priority' => 1,
+    )));
+    
+    
 }
 
 add_action('customize_register', 'theme_customize_register');
@@ -83,4 +103,10 @@ function get_contact_top_pc_bg() {
     } else {
         return get_template_directory_uri() . '/img/keyvisual_contact_pc.jpg';
     }
+}
+
+/* GREETING */
+
+function get_greeting_image(){
+    return esc_url(get_theme_mod('greeting_image'));
 }

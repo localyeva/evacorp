@@ -5,7 +5,7 @@
             <url>public_html/wp/wp-content/themes/eva2015/functions.php</url>
             <bookmark id="1">
                 <name/>
-                <line>187</line>
+                <line>236</line>
                 <key/>
             </bookmark>
         </file>
@@ -16,16 +16,19 @@
             <file>file:/var/www/html/evacorp.localhost/public_html/_company/index.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/contact_thankyou.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/html/css/style-xs-max.less</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-config.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/company_profile.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/header.php</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/wp-templ/archive-recommend.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/functions.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/html/css/style.less</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/index.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/html/css/style-md.less</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/footer.php</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/company.php</file>
             <file>file:/var/www/html/evacorp.localhost/_/work</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/service.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/wp-templ/archive-gallery.php</file>
-            <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/wp-templ/functions.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/js/contact.js</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-includes/link-template.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-includes/admin-bar.php</file>
@@ -36,12 +39,14 @@
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/contact.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/contact_confirm.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/html/css/style-xs.less</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/_company/greeting/index.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/cpt_acf_definitions.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/lib/Twig/Loader/Filesystem.php</file>
-            <file>file:/var/www/html/evacorp.localhost/public_html/.htaccess</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/company_greeting.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/_company/company_profile/index.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-includes/pluggable.php</file>
             <file>file:/var/www/html/evacorp.localhost/public_html/wp/wp-content/themes/eva2015/cpt_acf.php</file>
+            <file>file:/var/www/html/evacorp.localhost/public_html/wp/.htaccess</file>
         </group>
     </open-files>
 </project-private>

@@ -1,9 +1,9 @@
 === WP Multibyte Patch ===
 Contributors: tenpura
 Tags: multibyte,i18n,wp-multibyte-patch,Japanese
-Requires at least: 3.9-RC1
-Tested up to: 4.0
-Stable tag: 2.1.1
+Requires at least: 4.1-RC1
+Tested up to: 4.2
+Stable tag: 2.3.1
 
 Multibyte functionality enhancement for the WordPress Japanese package.
 
