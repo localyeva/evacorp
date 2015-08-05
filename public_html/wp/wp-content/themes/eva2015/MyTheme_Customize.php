@@ -8,16 +8,22 @@
 function theme_customize_register($wp_customize) {
 
     /* ADD SECTION */
+    /* COMPANY */
+    $wp_customize->add_section('company', array(
+        'title' => __('COMPANY'),
+        'priority' => 20,
+    ));
+    
     /* CONTACT */
     $wp_customize->add_section('contact', array(
         'title' => __('CONTACT'),
-        'priority' => 20,
+        'priority' => 21,
     ));
     
     /* GREETING */
     $wp_customize->add_section('greeting', array(
         'title' => __('GREETING'),
-        'priority' => 21,
+        'priority' => 22,
     ));
     
 
@@ -69,6 +75,17 @@ function theme_customize_register($wp_customize) {
         'priority' => 1,
     )));
     
+    /* COMPANY */
+    $wp_customize->add_setting('company_video', array(
+        'default' => '',        
+    ));
+    $wp_customize->add_control('company_video_c', array(
+        'label' => __('Embed Video'),
+        'section' => 'company',
+        'settings' => 'company_video',
+        'priority' => 1,
+        'type' => 'textarea',
+    ));
     
 }
 
@@ -86,6 +103,12 @@ function generate_css() {
 }
 
 add_action('wp_head', 'generate_css');
+
+/* COMPANY */
+function get_company_video(){
+    return get_theme_mod('company_video');
+}
+
 
 /* CONTACT */
 

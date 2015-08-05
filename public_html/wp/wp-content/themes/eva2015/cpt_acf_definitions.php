@@ -118,13 +118,112 @@ function cptui_register_my_cpts() {
         "capability_type" => "post",
         "map_meta_cap" => true,
         "hierarchical" => false,
-        "rewrite" => array("slug" => "company-staff", "with_front" => true),
+        "rewrite" => array("slug" => "company/staff", "with_front" => true),
         "query_var" => true,
         "menu_position" => 10,
         "menu_icon" => get_template_directory_uri() . '/img/ad-ico/company-staffx16.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("company-staff", $args);
+
+    $labels = array(
+        "name" => "Company Circle",
+        "singular_name" => "Company Circle",
+        "menu_name" => "社内取り組み",
+        "add_new" => "社内取り組みを追加",
+        "add_new_item" => "社内取り組み記事を書く",
+        "edit_item" => "社内取り組み記事を編集",
+        "new_item" => "新しい社内取り組み記事",
+        "view_item" => "社内取り組み記事を見る",
+        "search_items" => "社内取り組み記事を探す",
+        "not_found" => "社内取り組み記事はありません",
+        "not_found_in_trash" => "ゴミ箱に社内取り組み記事はありません",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "company/circle", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 11,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/company-circlex16.png',
+        "supports" => array("title", "editor"),
+    );
+    register_post_type("company-circle", $args);
+
+    $labels = array(
+        "name" => "Labo Result",
+        "singular_name" => "Labo Result",
+        "menu_name" => "開発実績",
+        "add_new" => "開発実績を追加",
+        "add_new_item" => "開発実績記事を書く",
+        "edit_item" => "開発実績記事を編集",
+        "new_item" => "新しい開発実績記事",
+        "view_item" => "開発実績記事を見る",
+        "search_items" => "開発実績記事を探す",
+        "not_found" => "開発実績記事はありません",
+        "not_found_in_trash" => "ゴミ箱に開発実績記事はありません",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "service/labo-result", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 12,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/service-labo-result-bx16.png',
+        "supports" => array("title", "editor"),
+    );
+    register_post_type("labo-result", $args);
+
+    $labels = array(
+        "name" => "BPO result",
+        "singular_name" => "BPO result",
+        "menu_name" => "BPO実績",
+        "add_new" => "BPO実績を追加",
+        "add_new_item" => "BPO実績記事を書く",
+        "edit_item" => "BPO実績記事を編集",
+        "new_item" => "新しいBPO実績記事",
+        "view_item" => "BPO実績記事を見る",
+        "search_items" => "BPO実績記事を探す",
+        "not_found" => "BPO実績記事はありません",
+        "not_found_in_trash" => "ゴミ箱にBPO実績記事はありません",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => false,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "service/bpo-result", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 13,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/service-bpo-resultx16.png',
+        "supports" => array("title", "editor"),
+    );
+    register_post_type("bpo-result", $args);
 
 // End of cptui_register_my_cpts()
 }
@@ -577,6 +676,40 @@ if (function_exists("register_field_group")) {
                 9 => 'categories',
                 10 => 'tags',
                 11 => 'send-trackbacks',
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+
+    register_field_group(array(
+        'id' => 'acf_company-circle',
+        'title' => 'Company Circle',
+        'fields' => array(
+            array(
+                'key' => 'field_55c181bd9aaed',
+                'label' => '画像',
+                'name' => 'img',
+                'type' => 'image',
+                'save_format' => 'object',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'company-circle',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
             ),
         ),
         'menu_order' => 0,

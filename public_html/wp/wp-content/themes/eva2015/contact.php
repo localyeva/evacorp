@@ -4,7 +4,6 @@
  * Template Name: Contact
  * 
  */
-get_header();
 
 $reg_company = @$_SESSION['contact']['company'];
 $reg_division = @$_SESSION['contact']['division'];
@@ -40,6 +39,8 @@ if (is_array($reg_inq)) {
         $reg_inq_all .= htmlspecialchars($value) . "<br/>";
     }
 }
+
+get_header();
 ?>
 
 <section>
@@ -71,7 +72,7 @@ if (is_array($reg_inq)) {
             印の入力は必須です。
         </p>
 
-        <form id="contact-form" class="form-horizontal" method="POST" action="<?php bloginfo('url') ?>/contact_confirm" novalidate="novalidate">
+        <form id="contact-form" class="form-horizontal" method="POST" action="<?php bloginfo('url') ?>/contact/confirm" novalidate="novalidate">
             <div class="form-group">
                 <label for="contact-company-name" class="col-sm-3 control-label">会社名<span class="red">※</span></label>
                 <div class="col-sm-9">
@@ -184,7 +185,8 @@ if (is_array($reg_inq)) {
 
             <div class="form-group send">
                 <div class="col-sm-12 hold-btn-send">
-                    <button class="btn btn-success center-block" type="submit" name="submit">同意して送信</button>
+                    <button class="btn btn-success center-block" type="submit">同意して送信</button>
+                    <input type="hidden" name="submit" value="submit"/>
                 </div>
             </div>
 

@@ -53,6 +53,15 @@ if (defined('WP_DEBUG') && WP_DEBUG) {
         ini_set('display_errors', '1');
 }
 
+// init session id
+function myStartSession() {
+    if (!session_id()) {
+        session_start();
+    }
+}
+
+add_action('init', 'myStartSession', 1);
+
 function scripts() {
     if (is_page('contact')) {
         wp_enqueue_script('js-validate', get_template_directory_uri() . '/js/jquery.validate.min.js', array(), '1.14.0', TRUE);
@@ -102,20 +111,6 @@ function theme_name_wp_title($title, $sep) {
 }
 
 add_filter('wp_title', 'theme_name_wp_title', 10, 2);
-
-
-
-
-
-
-
-//function myStartSession() {
-//    if (!session_id()) {
-//        session_start();
-//    }
-//}
-//
-//add_action('init', 'myStartSession', 1);
 
 /* ---------------------------------------------------------------------------- */
 // paging
@@ -402,8 +397,9 @@ function my_custom_movie() {
 }
 
 // Custom post Company/Circle
-add_action('init', 'my_custom_circle');
 
+/*
+add_action('init', 'my_custom_circle');
 function my_custom_circle() {
     $labels = array(
         'name' => _x('社内取り組み', 'post type general name'),
@@ -434,8 +430,10 @@ function my_custom_circle() {
     );
     register_post_type('circle', $args);
 }
+*/
 
 // Custom post Service/labo_result
+/*
 add_action('init', 'my_custom_labo_result');
 
 function my_custom_labo_result() {
@@ -468,8 +466,10 @@ function my_custom_labo_result() {
     );
     register_post_type('labo_result', $args);
 }
+*/
 
 // Custom post Service/bpo_result
+/*
 add_action('init', 'my_custom_bpo_result');
 
 function my_custom_bpo_result() {
@@ -502,6 +502,7 @@ function my_custom_bpo_result() {
     );
     register_post_type('bpo_result', $args);
 }
+*/
 
 // Custom post About_vietnam
 add_action('init', 'my_custom_about_vietnam');
@@ -595,41 +596,6 @@ function my_custom_recruit() {
     );
     register_post_type('recruit', $args);
 }
-
-// Custom post company/company_profile
-/*
-add_action('init', 'my_custom_company_profile');
-
-function my_custom_company_profile() {
-    $labels = array(
-        'name' => _x('会社概要', 'post type general name'),
-        'singular_name' => _x('会社概要', 'post type singular name'),
-        'add_new_item' => __('会社概要記事を書く'),
-        'edit_item' => __('会社概要記事を編集'),
-        'new_item' => __('新しい会社概要記事'),
-        'view_item' => __('会社概要記事を見る'),
-        'search_items' => __('会社概要記事を探す'),
-        'not_found' => __('会社概要記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱に会社概要記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 12,
-        'supports' => array('title'),
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'company/company_profile')
-    );
-    register_post_type('company_profile', $args);
-}
-*/
 
 add_action('init', 'my_custom_requirements');
 

@@ -46,6 +46,12 @@ get_header();
             <?php endwhile; ?>
         </div>
 
+        <div class="row">
+            <div class="col-md-12 col-xs-12 videoBox">
+                <?php echo get_company_video() ?>                
+            </div>
+        </div>
+
     </div>
 </section>
 

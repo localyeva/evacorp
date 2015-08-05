@@ -5,7 +5,7 @@
  * 
  */
 
-if (isset($_POST['submit']) && isset($_SESSION['contact'])) {
+if (isset($_POST['submit'])) {
 
     //お問い合わせフォーム内容
     $reg_company = @htmlspecialchars(stripslashes($_POST['company']));
@@ -215,7 +215,8 @@ get_header();
                                     戻る
                                 </button>
                             </a>
-                            <button class="btn btn-success center-block inline-block btn-confirm" type="submit" name="send">同意して送信</button>
+                            <button class="btn btn-success center-block inline-block btn-confirm" type="submit">同意して送信</button>
+                            <input type="hidden" name="send" value="send"/>
                         </div>
                     </form>
                 </td>
