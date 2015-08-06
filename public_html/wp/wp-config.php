@@ -104,6 +104,11 @@ define('WPLANG', 'ja');
  */
 define('WP_DEBUG', TRUE);
 
+/** 
+ * Turn Off Post Revision
+ */
+define('WP_POST_REVISIONS', false);
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

@@ -32,8 +32,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "faq", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 7,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/faqx16.png',
+        "menu_position" => 26,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h1.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("faq", $args);
@@ -57,8 +57,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "company-general", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 8,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/companyx16.png',
+        "menu_position" => 27,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h2.png',
     );
     register_post_type("company-general", $args);
 
@@ -88,8 +88,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "company-profile", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 9,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/company-profilex16.png',
+        "menu_position" => 28,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h3.png',
     );
     register_post_type("company-profile", $args);
 
@@ -120,8 +120,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "company/staff", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 10,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/company-staffx16.png',
+        "menu_position" => 29,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h4.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("company-staff", $args);
@@ -153,8 +153,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "company/circle", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 11,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/company-circlex16.png',
+        "menu_position" => 30,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h5.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("company-circle", $args);
@@ -186,8 +186,8 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "service/labo-result", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 12,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/service-labo-result-bx16.png',
+        "menu_position" => 31,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h6.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("labo-result", $args);
@@ -219,11 +219,44 @@ function cptui_register_my_cpts() {
         "hierarchical" => false,
         "rewrite" => array("slug" => "service/bpo-result", "with_front" => true),
         "query_var" => true,
-        "menu_position" => 13,
-        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/service-bpo-resultx16.png',
+        "menu_position" => 32,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h7.png',
         "supports" => array("title", "editor"),
     );
     register_post_type("bpo-result", $args);
+
+    $labels = array(
+        "name" => "Recommend",
+        "singular_name" => "Recommend",
+        "menu_name" => "参加企業の声",
+        "add_new" => "参加企業の声を追加",
+        "add_new_item" => "参加企業の声を書く",
+        "edit_item" => "参加企業の声の記事を編集",
+        "new_item" => "新しい参加企業の声記事",
+        "view_item" => "参加企業の声の記事を見る",
+        "search_items" => "参加企業の声の記事を探す",
+        "not_found" => "参加企業の声記事はありません",
+        "not_found_in_trash" => "ゴミ箱に参加企業の声の記事はありません",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "recommend", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 33,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h8.png',
+        "supports" => array("title"),
+    );
+    register_post_type("recommend", $args);
 
 // End of cptui_register_my_cpts()
 }
@@ -632,7 +665,7 @@ if (function_exists("register_field_group")) {
                 'label' => 'スタッフ画像 02',
                 'name' => 'image02',
                 'type' => 'image',
-                'save_format' => 'object',
+                'save_format' => 'url',
                 'preview_size' => 'thumbnail',
                 'library' => 'all',
             ),
@@ -690,7 +723,7 @@ if (function_exists("register_field_group")) {
                 'label' => '画像',
                 'name' => 'img',
                 'type' => 'image',
-                'save_format' => 'object',
+                'save_format' => 'url',
                 'preview_size' => 'thumbnail',
                 'library' => 'all',
             ),
@@ -714,4 +747,110 @@ if (function_exists("register_field_group")) {
         ),
         'menu_order' => 0,
     ));
+
+    register_field_group(array(
+        'id' => 'acf_recommend',
+        'title' => 'Recommend',
+        'fields' => array(
+            array(
+                'key' => 'field_55c2daeb6523b',
+                'label' => 'サブタイトル',
+                'name' => 'comp_slogan',
+                'type' => 'textarea',
+                'instructions' => 'サブタイトル、コピーをいれてください',
+                'default_value' => '',
+                'placeholder' => '',
+                'maxlength' => '',
+                'rows' => '',
+                'formatting' => 'br',
+            ),
+            array(
+                'key' => 'field_55c2db056523c',
+                'label' => '画像',
+                'name' => 'comp_img',
+                'type' => 'image',
+                'instructions' => '画像をアップロードしてください',
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_55c2db1c6523d',
+                'label' => '企業ロゴ',
+                'name' => 'comp_logo',
+                'type' => 'image',
+                'instructions' => '企業ロゴをいれてください',
+                'save_format' => 'url',
+                'preview_size' => 'thumbnail',
+                'library' => 'all',
+            ),
+            array(
+                'key' => 'field_55c2db346523e',
+                'label' => '企業リンク',
+                'name' => 'comLink',
+                'type' => 'text',
+                'instructions' => '参加企業へのリンクをいれてください',
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'formatting' => 'html',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_55c2db4b6523f',
+                'label' => 'FAQ',
+                'name' => 'faq',
+                'type' => 'repeater',
+                'sub_fields' => array(
+                    array(
+                        'key' => 'field_55c2db5c65240',
+                        'label' => 'Question',
+                        'name' => 'question',
+                        'type' => 'text',
+                        'column_width' => '',
+                        'default_value' => '',
+                        'placeholder' => '',
+                        'prepend' => '',
+                        'append' => '',
+                        'formatting' => 'html',
+                        'maxlength' => '',
+                    ),
+                    array(
+                        'key' => 'field_55c2db7765241',
+                        'label' => 'Answer',
+                        'name' => 'answer',
+                        'type' => 'wysiwyg',
+                        'column_width' => '',
+                        'default_value' => '',
+                        'toolbar' => 'full',
+                        'media_upload' => 'yes',
+                    ),
+                ),
+                'row_min' => '',
+                'row_limit' => '',
+                'layout' => 'table',
+                'button_label' => 'faqを追加',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'recommend',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            ),
+        ),
+        'options' => array(
+            'position' => 'normal',
+            'layout' => 'no_box',
+            'hide_on_screen' => array(
+            ),
+        ),
+        'menu_order' => 0,
+    ));
+    
 }

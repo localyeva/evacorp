@@ -68,7 +68,7 @@ function scripts() {
         wp_enqueue_script('js-contact', get_template_directory_uri() . '/js/contact.js', array('js-validate'), '1', TRUE);
     }
     //
-    
+
     var_dump(get_query_var('pagename'));
 }
 
@@ -235,100 +235,104 @@ function my_custom_news() {
 }
 
 // Custom post Recommend
-add_action('init', 'my_custom_recommend');
+/*
+  add_action('init', 'my_custom_recommend');
 
-function my_custom_recommend() {
-    $labels = array(
-        'name' => _x('参加企業の声', 'post type general name'),
-        'singular_name' => _x('参加企業の声', 'post type singular name'),
-        'add_new' => _x('参加企業の声を追加', 'recommend'),
-        'add_new_item' => __('参加企業の声を書く'),
-        'edit_item' => __('参加企業の声の記事を編集'),
-        'new_item' => __('新しい参加企業の声記事'),
-        'view_item' => __('参加企業の声の記事を見る'),
-        'search_items' => __('参加企業の声の記事を探す'),
-        'not_found' => __('参加企業の声記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱に参加企業の声の記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 7,
-        'supports' => array('title'),
-        'has_archive' => true
-    );
-    register_post_type('recommend', $args);
-}
+  function my_custom_recommend() {
+  $labels = array(
+  'name' => _x('参加企業の声', 'post type general name'),
+  'singular_name' => _x('参加企業の声', 'post type singular name'),
+  'add_new' => _x('参加企業の声を追加', 'recommend'),
+  'add_new_item' => __('参加企業の声を書く'),
+  'edit_item' => __('参加企業の声の記事を編集'),
+  'new_item' => __('新しい参加企業の声記事'),
+  'view_item' => __('参加企業の声の記事を見る'),
+  'search_items' => __('参加企業の声の記事を探す'),
+  'not_found' => __('参加企業の声記事はありません'),
+  'not_found_in_trash' => __('ゴミ箱に参加企業の声の記事はありません'),
+  'parent_item_colon' => ''
+  );
+  $args = array(
+  'labels' => $labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'show_ui' => true,
+  'query_var' => true,
+  'rewrite' => true,
+  'capability_type' => 'post',
+  'hierarchical' => false,
+  'menu_position' => 7,
+  'supports' => array('title'),
+  'has_archive' => true
+  );
+  register_post_type('recommend', $args);
+  }
+ * 
+ */
 
 /*
-// Custom post Company/Staff
-add_action('init', 'my_custom_staff');
+  // Custom post Company/Staff
+  add_action('init', 'my_custom_staff');
 
-function my_custom_staff() {
-    $labels = array(
-        'name' => _x('スタッフ紹介', 'post type general name'),
-        'singular_name' => _x('スタッフ紹介', 'post type singular name'),
-        'add_new' => _x('スタッフ紹介を追加', 'staff'),
-        'add_new_item' => __('スタッフ紹介記事を書く'),
-        'edit_item' => __('スタッフ紹介記事を編集'),
-        'new_item' => __('新しいスタッフ紹介記事'),
-        'view_item' => __('スタッフ紹介記事を見る'),
-        'search_items' => __('スタッフ紹介記事を探す'),
-        'not_found' => __('スタッフ紹介記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱にスタッフ紹介記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 8,
-        'supports' => array('title', 'editor'),
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'company/staff')
-    );
-    register_post_type('staff', $args);
-}
+  function my_custom_staff() {
+  $labels = array(
+  'name' => _x('スタッフ紹介', 'post type general name'),
+  'singular_name' => _x('スタッフ紹介', 'post type singular name'),
+  'add_new' => _x('スタッフ紹介を追加', 'staff'),
+  'add_new_item' => __('スタッフ紹介記事を書く'),
+  'edit_item' => __('スタッフ紹介記事を編集'),
+  'new_item' => __('新しいスタッフ紹介記事'),
+  'view_item' => __('スタッフ紹介記事を見る'),
+  'search_items' => __('スタッフ紹介記事を探す'),
+  'not_found' => __('スタッフ紹介記事はありません'),
+  'not_found_in_trash' => __('ゴミ箱にスタッフ紹介記事はありません'),
+  'parent_item_colon' => ''
+  );
+  $args = array(
+  'labels' => $labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'show_ui' => true,
+  'query_var' => true,
+  'rewrite' => true,
+  'capability_type' => 'post',
+  'hierarchical' => false,
+  'menu_position' => 8,
+  'supports' => array('title', 'editor'),
+  'has_archive' => true,
+  'rewrite' => array('slug' => 'company/staff')
+  );
+  register_post_type('staff', $args);
+  }
 
-// Staff category
-add_action('init', 'create_staff_taxonomy', '0');
+  // Staff category
+  add_action('init', 'create_staff_taxonomy', '0');
 
-function create_staff_taxonomy() {
-    $taxonomylabels = array(
-        'name' => _x('staffcat', 'post type general name'),
-        'singular_name' => _x('staffcat', 'post type singular name'),
-        'search_items' => __('staffcat'),
-        'all_items' => __('staffcat'),
-        'parent_item' => __('Parent staffcat'),
-        'parent_item_colon' => __('Parent staffcat:'),
-        'edit_item' => __('staffcat記事を編集'),
-        'menu_name' => __('カテゴリー'),
-    );
-    $args = array(
-        'labels' => $taxonomylabels,
-        'hierarchical' => true,
-        'has_archive' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'staff/cat')
-    );
-    register_taxonomy('staffcat', 'staff', $args);
-}
-*/
+  function create_staff_taxonomy() {
+  $taxonomylabels = array(
+  'name' => _x('staffcat', 'post type general name'),
+  'singular_name' => _x('staffcat', 'post type singular name'),
+  'search_items' => __('staffcat'),
+  'all_items' => __('staffcat'),
+  'parent_item' => __('Parent staffcat'),
+  'parent_item_colon' => __('Parent staffcat:'),
+  'edit_item' => __('staffcat記事を編集'),
+  'menu_name' => __('カテゴリー'),
+  );
+  $args = array(
+  'labels' => $taxonomylabels,
+  'hierarchical' => true,
+  'has_archive' => true,
+  'show_ui' => true,
+  'query_var' => true,
+  'rewrite' => array('slug' => 'staff/cat')
+  );
+  register_taxonomy('staffcat', 'staff', $args);
+  }
+ */
 
 // Custom post Company/Gallery
+/*
 add_action('init', 'my_custom_gallery');
 
 function my_custom_gallery() {
@@ -361,8 +365,10 @@ function my_custom_gallery() {
     );
     register_post_type('gallery', $args);
 }
+*/
 
 // Custom post Company/Movie
+/*
 add_action('init', 'my_custom_movie');
 
 function my_custom_movie() {
@@ -395,114 +401,115 @@ function my_custom_movie() {
     );
     register_post_type('movie', $args);
 }
+*/
 
 // Custom post Company/Circle
 
 /*
-add_action('init', 'my_custom_circle');
-function my_custom_circle() {
-    $labels = array(
-        'name' => _x('社内取り組み', 'post type general name'),
-        'singular_name' => _x('社内取り組み', 'post type singular name'),
-        'add_new' => _x('社内取り組みを追加', 'circle'),
-        'add_new_item' => __('社内取り組み記事を書く'),
-        'edit_item' => __('社内取り組み記事を編集'),
-        'new_item' => __('新しい社内取り組み記事'),
-        'view_item' => __('社内取り組み記事を見る'),
-        'search_items' => __('社内取り組み記事を探す'),
-        'not_found' => __('社内取り組み記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱に社内取り組み記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 11,
-        'supports' => array('title', 'editor'),
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'company/circle')
-    );
-    register_post_type('circle', $args);
-}
-*/
+  add_action('init', 'my_custom_circle');
+  function my_custom_circle() {
+  $labels = array(
+  'name' => _x('社内取り組み', 'post type general name'),
+  'singular_name' => _x('社内取り組み', 'post type singular name'),
+  'add_new' => _x('社内取り組みを追加', 'circle'),
+  'add_new_item' => __('社内取り組み記事を書く'),
+  'edit_item' => __('社内取り組み記事を編集'),
+  'new_item' => __('新しい社内取り組み記事'),
+  'view_item' => __('社内取り組み記事を見る'),
+  'search_items' => __('社内取り組み記事を探す'),
+  'not_found' => __('社内取り組み記事はありません'),
+  'not_found_in_trash' => __('ゴミ箱に社内取り組み記事はありません'),
+  'parent_item_colon' => ''
+  );
+  $args = array(
+  'labels' => $labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'show_ui' => true,
+  'query_var' => true,
+  'rewrite' => true,
+  'capability_type' => 'post',
+  'hierarchical' => false,
+  'menu_position' => 11,
+  'supports' => array('title', 'editor'),
+  'has_archive' => true,
+  'rewrite' => array('slug' => 'company/circle')
+  );
+  register_post_type('circle', $args);
+  }
+ */
 
 // Custom post Service/labo_result
 /*
-add_action('init', 'my_custom_labo_result');
+  add_action('init', 'my_custom_labo_result');
 
-function my_custom_labo_result() {
-    $labels = array(
-        'name' => _x('開発実績', 'post type general name'),
-        'singular_name' => _x('開発実績', 'post type singular name'),
-        'add_new' => _x('開発実績を追加', 'labo_result'),
-        'add_new_item' => __('開発実績記事を書く'),
-        'edit_item' => __('開発実績記事を編集'),
-        'new_item' => __('新しい開発実績記事'),
-        'view_item' => __('開発実績記事を見る'),
-        'search_items' => __('開発実績記事を探す'),
-        'not_found' => __('開発実績記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱に開発実績記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 12,
-        'supports' => array('title', 'editor'),
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'service/labo_result')
-    );
-    register_post_type('labo_result', $args);
-}
-*/
+  function my_custom_labo_result() {
+  $labels = array(
+  'name' => _x('開発実績', 'post type general name'),
+  'singular_name' => _x('開発実績', 'post type singular name'),
+  'add_new' => _x('開発実績を追加', 'labo_result'),
+  'add_new_item' => __('開発実績記事を書く'),
+  'edit_item' => __('開発実績記事を編集'),
+  'new_item' => __('新しい開発実績記事'),
+  'view_item' => __('開発実績記事を見る'),
+  'search_items' => __('開発実績記事を探す'),
+  'not_found' => __('開発実績記事はありません'),
+  'not_found_in_trash' => __('ゴミ箱に開発実績記事はありません'),
+  'parent_item_colon' => ''
+  );
+  $args = array(
+  'labels' => $labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'show_ui' => true,
+  'query_var' => true,
+  'rewrite' => true,
+  'capability_type' => 'post',
+  'hierarchical' => false,
+  'menu_position' => 12,
+  'supports' => array('title', 'editor'),
+  'has_archive' => true,
+  'rewrite' => array('slug' => 'service/labo_result')
+  );
+  register_post_type('labo_result', $args);
+  }
+ */
 
 // Custom post Service/bpo_result
 /*
-add_action('init', 'my_custom_bpo_result');
+  add_action('init', 'my_custom_bpo_result');
 
-function my_custom_bpo_result() {
-    $labels = array(
-        'name' => _x('BPO実績', 'post type general name'),
-        'singular_name' => _x('BPO実績', 'post type singular name'),
-        'add_new' => _x('BPO実績を追加', 'bpo_result'),
-        'add_new_item' => __('BPO実績記事を書く'),
-        'edit_item' => __('BPO実績記事を編集'),
-        'new_item' => __('新しいBPO実績記事'),
-        'view_item' => __('BPO実績記事を見る'),
-        'search_items' => __('BPO実績記事を探す'),
-        'not_found' => __('BPO実績記事はありません'),
-        'not_found_in_trash' => __('ゴミ箱にBPO実績記事はありません'),
-        'parent_item_colon' => ''
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
-        'show_ui' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'menu_position' => 12,
-        'supports' => array('title', 'editor'),
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'service/bpo_result')
-    );
-    register_post_type('bpo_result', $args);
-}
-*/
+  function my_custom_bpo_result() {
+  $labels = array(
+  'name' => _x('BPO実績', 'post type general name'),
+  'singular_name' => _x('BPO実績', 'post type singular name'),
+  'add_new' => _x('BPO実績を追加', 'bpo_result'),
+  'add_new_item' => __('BPO実績記事を書く'),
+  'edit_item' => __('BPO実績記事を編集'),
+  'new_item' => __('新しいBPO実績記事'),
+  'view_item' => __('BPO実績記事を見る'),
+  'search_items' => __('BPO実績記事を探す'),
+  'not_found' => __('BPO実績記事はありません'),
+  'not_found_in_trash' => __('ゴミ箱にBPO実績記事はありません'),
+  'parent_item_colon' => ''
+  );
+  $args = array(
+  'labels' => $labels,
+  'public' => true,
+  'publicly_queryable' => true,
+  'show_ui' => true,
+  'query_var' => true,
+  'rewrite' => true,
+  'capability_type' => 'post',
+  'hierarchical' => false,
+  'menu_position' => 12,
+  'supports' => array('title', 'editor'),
+  'has_archive' => true,
+  'rewrite' => array('slug' => 'service/bpo_result')
+  );
+  register_post_type('bpo_result', $args);
+  }
+ */
 
 // Custom post About_vietnam
 add_action('init', 'my_custom_about_vietnam');
