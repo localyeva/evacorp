@@ -202,6 +202,7 @@ add_filter('parse_query', 'todo_convert_restrict');
 
 //array('title','editor','thumbnail','custom-fields','excerpt','author','trackbacks','comments','revisions','page-attributes')
 // Custom post News
+/*
 add_action('init', 'my_custom_news');
 
 function my_custom_news() {
@@ -233,6 +234,7 @@ function my_custom_news() {
     );
     register_post_type('news', $args);
 }
+*/
 
 // Custom post Recommend
 /*
@@ -512,6 +514,7 @@ function my_custom_movie() {
  */
 
 // Custom post About_vietnam
+/*
 add_action('init', 'my_custom_about_vietnam');
 
 function my_custom_about_vietnam() {
@@ -570,6 +573,7 @@ function create_about_vietnamcat_taxonomy() {
     );
     register_taxonomy('about_vietnamcat', 'about_vietnam', $args);
 }
+*/
 
 // Custom post Recruit
 add_action('init', 'my_custom_recruit');

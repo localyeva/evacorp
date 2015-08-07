@@ -258,6 +258,39 @@ function cptui_register_my_cpts() {
     );
     register_post_type("recommend", $args);
 
+    $labels = array(
+        "name" => "News",
+        "singular_name" => "News",
+        "menu_name" => "ニュース",
+        "add_new" => "ニュースを追加",
+        "add_new_item" => "ニュース記事を書く",
+        "edit_item" => "ニュース記事を編集",
+        "new_item" => "新しいニュース記事",
+        "view_item" => "ニュース記事を見る",
+        "search_items" => "ニュース記事を探す",
+        "not_found" => "ニュース記事はありません",
+        "not_found_in_trash" => "ゴミ箱にニュース記事はありません",
+    );
+
+    $args = array(
+        "labels" => $labels,
+        "description" => "",
+        "public" => true,
+        "show_ui" => true,
+        "has_archive" => true,
+        "show_in_menu" => true,
+        "exclude_from_search" => false,
+        "capability_type" => "post",
+        "map_meta_cap" => true,
+        "hierarchical" => false,
+        "rewrite" => array("slug" => "news", "with_front" => true),
+        "query_var" => true,
+        "menu_position" => 34,
+        "menu_icon" => get_template_directory_uri() . '/img/ad-ico/h9.png',
+        "supports" => array("title", "editor"),
+    );
+    register_post_type("news", $args);
+
 // End of cptui_register_my_cpts()
 }
 
@@ -852,5 +885,4 @@ if (function_exists("register_field_group")) {
         ),
         'menu_order' => 0,
     ));
-    
 }
