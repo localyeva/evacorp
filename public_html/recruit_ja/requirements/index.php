@@ -68,6 +68,11 @@
 		  </div>
           <div class="SText">
             <dl>
+                <?php if (get_field("employment_status") != "") { ?>
+                                        <dt>雇用形態</dt>
+                                        <dd>	<?php echo get_field("employment_status"); ?></dd>
+                                    <?php } ?>
+                                        
 				<?php if(get_field( "value2" ) !="") {?>
               <dt>給与</dt>
               <dd>	<?php echo get_field( "value2" );  ?></dd>
